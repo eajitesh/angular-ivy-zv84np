@@ -4,15 +4,29 @@ import { CloudData, CloudOptions } from 'angular-tag-cloud-module';
 
 import { NCC } from '../ncc';
 
+import { KeywordsWordcloudService } from '../keywords-wordcloud.service';
+
 @Component({
   selector: 'app-keywords-word-cloud',
   templateUrl: './keywords-word-cloud.component.html',
   styleUrls: ['./keywords-word-cloud.component.css'],
 })
 export class KeywordsWordCloudComponent implements OnInit {
-  constructor() {}
+  // @Input() ncc?: NCC;
+  @Input()
+  get ncc(): NCC {
+    return this._ncc;
+  }
+  set ncc(ncc: NCC) {
+    this._ncc = ncc;
+  }
+  private _ncc?: NCC;
 
-  @Input() ncc?: NCC;
+  cloudData?: CloudData[];
+
+  // set ncc(ncc: NCC) {
+  //   this.cloudData = this.keywordsWordCloudService.getWordCloud(this.ncc);
+  // }
 
   options: CloudOptions = {
     // if width is between 0 and 1 it will be set to the width of the upper element multiplied by the value
@@ -22,25 +36,13 @@ export class KeywordsWordCloudComponent implements OnInit {
     overflow: false,
   };
 
-  data: CloudData[] = [
-    {
-      text: 'Weight-8-link-color',
-      weight: 9,
-    },
-    {
-      text: 'Weight-10-link',
-      weight: 10,
-    },
-    {
-      text: 'Weight-8-link',
-      weight: 8,
-    },
-    {
-      text: 'Weight-11-link',
-      weight: 11,
-    },
-    // ...
-  ];
+  constructor(private keywordsWordCloudService: KeywordsWordcloudService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // this.cloudData = this.keywordsWordCloudService.getWordCloud(this.ncc);
+    // this.keywordsWordCloudService
+    //   .getWordCloud(this.ncc)
+    //   .subscribe((cdata) => (this.cloudData = cdata));
+    this.keywordsWordCloudService.getWordCloud(this.ncc);
+  }
 }

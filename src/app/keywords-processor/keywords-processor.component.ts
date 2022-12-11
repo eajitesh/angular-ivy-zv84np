@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KeywordsService } from '../keywords.service';
 
 import { NCC } from '../ncc';
 import { SupportedNCCs } from '../supported-nccs';
@@ -9,14 +10,20 @@ import { SupportedNCCs } from '../supported-nccs';
   styleUrls: ['./keywords-processor.component.css'],
 })
 export class KeywordsProcessorComponent implements OnInit {
-  supportedNCCs = SupportedNCCs;
+  supportedNCCs: NCC[] = [];
   selectedNCC?: NCC;
 
-  constructor() {}
+  constructor(private keywordsService: KeywordsService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getSupportedNCCs();
+  }
 
   onSelect(ncc: NCC): void {
     this.selectedNCC = ncc;
+  }
+
+  getSupportedNCCs(): void {
+    this.supportedNCCs = this.keywordsService.getSupportedNCCs();
   }
 }
