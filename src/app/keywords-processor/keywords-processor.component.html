@@ -38,7 +38,10 @@
     </tr>
     <tr>
       <td colspan="2">
-        <app-keywords-word-cloud></app-keywords-word-cloud>
+        <app-keywords-word-cloud
+          *ngIf="selectedNCC"
+          [ncc]="selectedNCC"
+        ></app-keywords-word-cloud>
       </td>
     </tr>
   </thead>

@@ -6,5 +6,5 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  name = 'Keywords Dictionary for Spend Categories';
+  name = 'Keywords Dictionary for Spend Categories (NCCs)';
 }
