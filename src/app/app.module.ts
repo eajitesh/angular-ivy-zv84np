@@ -6,10 +6,15 @@ import { AppComponent } from './app.component';
 import { KeywordsProcessorComponent } from './keywords-processor/keywords-processor.component';
 
 import { TagCloudComponent } from 'angular-tag-cloud-module';
+import { KeywordsWordCloudComponent } from './keywords-word-cloud/keywords-word-cloud.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, TagCloudComponent],
-  declarations: [AppComponent, KeywordsProcessorComponent],
+  declarations: [
+    AppComponent,
+    KeywordsProcessorComponent,
+    KeywordsWordCloudComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

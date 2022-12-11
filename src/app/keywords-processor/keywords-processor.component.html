@@ -30,11 +30,16 @@
           </div>
         </div>
       </th>
-      <th scope="col" style="text-align:left">
+      <th scope="col">
         <span *ngIf="selectedNCC">
           <h4>{{ selectedNCC.name }} ({{ selectedNCC.id }})</h4>
         </span>
       </th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <app-keywords-word-cloud></app-keywords-word-cloud>
+      </td>
     </tr>
   </thead>
 </table>
