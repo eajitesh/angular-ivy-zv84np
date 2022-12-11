@@ -5,26 +5,36 @@
   {{ marketingAgency.name }}
 </div>
 -->
-<div class="dropdown">
-  <button
-    class="btn btn-secondary dropdown-toggle"
-    type="button"
-    id="dropdownMenuButton"
-    data-toggle="dropdown"
-    aria-haspopup="true"
-    aria-expanded="false"
-  >
-    Select an NCC
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a
-      class="dropdown-item"
-      *ngFor="let ncc of supportedNCCs"
-      (click)="onSelect(ncc)"
-      >{{ ncc.name }}</a
-    >
-  </div>
-  <div *ngIf="selectedNCC">
-    <h3>{{ selectedNCC.name }} ({{ selectedNCC.id }}) Details</h3>
-  </div>
-</div>
+<table class="table table-striped">
+  <thead style="margin:0px;padding:0px">
+    <tr>
+      <th scope="col" style="width:30%">
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Select a Spend Category
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a
+              class="dropdown-item"
+              *ngFor="let ncc of supportedNCCs"
+              (click)="onSelect(ncc)"
+              >{{ ncc.name }}</a
+            >
+          </div>
+        </div>
+      </th>
+      <th scope="col" style="text-align:left">
+        <span *ngIf="selectedNCC">
+          <h4>{{ selectedNCC.name }} ({{ selectedNCC.id }})</h4>
+        </span>
+      </th>
+    </tr>
+  </thead>
+</table>
