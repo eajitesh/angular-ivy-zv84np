@@ -18,6 +18,9 @@ export const KeywordsCloudArr: KeywordsCloud[] = [
       { text: 'patient journey', weight: 225 },
       { text: 'qualitative', weight: 196 },
       { text: 'message recall', weight: 120 },
+      { text: 'focus group', weight: 120 },
+      { text: 'online', weight: 171 },
+      { text: 'track', weight: 160 },
     ],
   },
   {
@@ -40,6 +43,9 @@ export const KeywordsCloudArr: KeywordsCloud[] = [
       { text: 'advisory board', weight: 156 },
       { text: 'funding flow', weight: 84 },
       { text: 'evidence requirement', weight: 18 },
+      { text: 'analog', weight: 12 },
+      { text: 'payer mix', weight: 9 },
+      { text: 'price trade-off', weight: 8 },
     ],
   },
 ];
