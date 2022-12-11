@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { KeywordsService } from '../keywords.service';
 
 import { NCC } from '../ncc';
-import { SupportedNCCs } from '../supported-nccs';
 
 @Component({
   selector: 'app-keywords-processor',

@@ -19,9 +19,9 @@ export class KeywordsWordCloudComponent implements OnInit {
   }
   set ncc(ncc: NCC) {
     this._ncc = ncc;
+    this.cloudData = this.keywordsWordCloudService.getWordCloud(this.ncc);
   }
-  private _ncc?: NCC;
-
+  _ncc?: NCC;
   cloudData?: CloudData[];
 
   // set ncc(ncc: NCC) {
@@ -38,11 +38,5 @@ export class KeywordsWordCloudComponent implements OnInit {
 
   constructor(private keywordsWordCloudService: KeywordsWordcloudService) {}
 
-  ngOnInit() {
-    // this.cloudData = this.keywordsWordCloudService.getWordCloud(this.ncc);
-    // this.keywordsWordCloudService
-    //   .getWordCloud(this.ncc)
-    //   .subscribe((cdata) => (this.cloudData = cdata));
-    this.keywordsWordCloudService.getWordCloud(this.ncc);
-  }
+  ngOnInit() {}
 }
