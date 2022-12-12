@@ -7,9 +7,10 @@ import { KeywordsProcessorComponent } from './keywords-processor/keywords-proces
 
 import { TagCloudComponent } from 'angular-tag-cloud-module';
 import { KeywordsWordCloudComponent } from './keywords-word-cloud/keywords-word-cloud.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, TagCloudComponent],
+  imports: [BrowserModule, FormsModule, TagCloudComponent, AppRoutingModule],
   declarations: [
     AppComponent,
     KeywordsProcessorComponent,

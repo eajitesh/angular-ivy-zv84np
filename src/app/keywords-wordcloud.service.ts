@@ -16,7 +16,7 @@ export class KeywordsWordcloudService {
 
     for (let i = 0; i < klen; i++) {
       const kc = KeywordsCloudArr[i];
-      if (kc.id == ncc.id) {
+      if (kc.id == ncc.uid) {
         console.log('selected ncc: ' + kc.id + ' --- returning');
         const cloudData: CloudData[] = kc.keywords;
         return cloudData;
