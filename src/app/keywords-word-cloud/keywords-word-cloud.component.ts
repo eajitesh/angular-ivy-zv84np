@@ -24,15 +24,11 @@ export class KeywordsWordCloudComponent implements OnInit {
   _ncc?: NCC;
   cloudData?: CloudData[];
 
-  // set ncc(ncc: NCC) {
-  //   this.cloudData = this.keywordsWordCloudService.getWordCloud(this.ncc);
-  // }
-
   options: CloudOptions = {
     // if width is between 0 and 1 it will be set to the width of the upper element multiplied by the value
-    width: 1000,
+    width: 800,
     // if height is between 0 and 1 it will be set to the height of the upper element multiplied by the value
-    height: 400,
+    height: 300,
     overflow: false,
   };
 

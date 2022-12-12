@@ -1,10 +1,3 @@
-<!--
-<div>
-  <label for="name">NCC name: </label>
-  <input id="name" [(ngModel)]="marketingAgency.name" placeholder="name" />
-  {{ marketingAgency.name }}
-</div>
--->
 <table class="table table-striped">
   <thead style="margin:0px;padding:0px">
     <tr>
@@ -27,6 +20,9 @@
               (click)="onSelect(ncc)"
               >{{ ncc.name }}</a
             >
+          </div>
+          <div style="font-size:9px;margin-left:20px;font-weight:normal">
+            Version: 1.01, Last updated: 12/12/2022
           </div>
         </div>
       </th>

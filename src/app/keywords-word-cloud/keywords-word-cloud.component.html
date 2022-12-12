@@ -1,9 +1,26 @@
-<div style="padding:0px;margin:0px">
-  <angular-tag-cloud
-    [data]="cloudData"
-    [width]="options.width"
-    [height]="options.height"
-    [overflow]="options.overflow"
-  >
-  </angular-tag-cloud>
-</div>
+<table class="table-responsive table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" style="text-align:center;width: 30%">Keywords list</th>
+      <th scope="col" style="text-align:center;width: 70%">Keywords cloud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li *ngFor="let cdata of cloudData">{{ cdata.text }}</li>
+        </ul>
+      </td>
+      <td>
+        <angular-tag-cloud
+          [data]="cloudData"
+          [width]="options.width"
+          [height]="options.height"
+          [overflow]="options.overflow"
+        >
+        </angular-tag-cloud>
+      </td>
+    </tr>
+  </tbody>
+</table>
