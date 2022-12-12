@@ -12,6 +12,8 @@ export class KeywordsProcessorComponent implements OnInit {
   supportedNCCs: NCC[] = [];
   selectedNCC?: NCC;
 
+  currentDate = new Date();
+
   constructor(private keywordsService: KeywordsService) {}
 
   ngOnInit() {

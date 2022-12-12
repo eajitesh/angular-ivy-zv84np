@@ -1,7 +1,7 @@
 <table class="table table-striped">
   <thead style="margin:0px;padding:0px">
     <tr>
-      <th scope="col" style="width:30%">
+      <th scope="col">
         <div class="dropdown">
           <button
             class="btn btn-secondary dropdown-toggle"
@@ -21,19 +21,24 @@
               >{{ ncc.name }}</a
             >
           </div>
-          <div style="font-size:9px;margin-left:20px;font-weight:normal">
-            Version: 1.01, Last updated: 12/12/2022
+          <div style="font-size:9px;margin-left:10px;font-weight:normal">
+            Version: 1.01, Last updated: {{ currentDate | date: 'dd-MMM-yyyy' }}
           </div>
         </div>
       </th>
-      <th scope="col">
-        <span *ngIf="selectedNCC">
+      <th scope="col" style="">
+        <div *ngIf="selectedNCC" style="padding-top:0px">
           <h4>{{ selectedNCC.name }} ({{ selectedNCC.id }})</h4>
-        </span>
+        </div>
+      </th>
+      <th scope="col" style="width: 10%">
+        <div *ngIf="selectedNCC">
+          <a href="#">Download</a>
+        </div>
       </th>
     </tr>
     <tr>
-      <td colspan="2" style="padding:0px;margin:0px">
+      <td colspan="3" style="vertical-align: middle">
         <app-keywords-word-cloud
           *ngIf="selectedNCC"
           [ncc]="selectedNCC"

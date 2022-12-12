@@ -22,25 +22,5 @@ export class KeywordsWordcloudService {
         return cloudData;
       }
     }
-    // const cloudData: CloudData[] = [
-    //   {
-    //     text: 'Weight-9-link-color',
-    //     weight: 9,
-    //   },
-    //   {
-    //     text: 'Weight-10-link',
-    //     weight: 10,
-    //   },
-    //   {
-    //     text: 'Weight-8-link',
-    //     weight: 8,
-    //   },
-    //   {
-    //     text: 'Weight-11-link',
-    //     weight: 11,
-    //   },
-    //   // ...
-    // ];
-    // return cloudData;
   }
 }
