@@ -12,12 +12,12 @@
   </thead>
   <tbody>
     <tr>
-      <td>
+      <td style="vertical-align:top">
         <ul>
           <li *ngFor="let cdata of cloudData">{{ cdata.text }}</li>
         </ul>
       </td>
-      <td>
+      <td style="vertical-align:top">
         <angular-tag-cloud
           [data]="cloudData"
           [width]="options.width"
