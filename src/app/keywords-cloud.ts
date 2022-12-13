@@ -60,8 +60,9 @@ export const KeywordsCloudArr: KeywordsCloud[] = [
   {
     id: SupportedNCCs[1]['uid'],
     keywords: [
-      { text: 'secondary market research', weight: 500, augment: [], link: '' },
-      { text: 'SMR', weight: 225, augment: [], link: '' },
+      { text: 'Forecasting', weight: 192, augment: [], link: '' },
+      { text: 'Market situation', weight: 195, augment: [], link: '' },
+      { text: 'Analytics', weight: 96, augment: [], link: '' },
     ],
   },
   {

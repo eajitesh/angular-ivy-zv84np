@@ -39,21 +39,11 @@ export class KeywordsWordcloudService {
     for (let i = 0; i < klen; i++) {
       const kc = KeywordsCloudArr[i];
       if (kc.id == uid) {
-        // const cloudData: CloudData[] = kc.keywords;
         const klen2 = kc.keywords.length;
-        console.log(
-          'getAugWordCloudByNCCUidName: ' +
-            uid +
-            ', ' +
-            text +
-            ', Len: ' +
-            klen2
-        );
         for (let j = 0; j < klen2; j++) {
           const kccloud = kc.keywords[j];
           console.log(kccloud.text);
           if (text.indexOf(kccloud.text) !== -1) {
-            console.log('------: ' + kccloud.text);
             const cloudData: CloudData[] = kccloud.augment;
             return cloudData;
           }

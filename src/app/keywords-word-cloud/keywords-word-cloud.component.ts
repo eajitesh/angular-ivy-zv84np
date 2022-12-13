@@ -20,6 +20,7 @@ export class KeywordsWordCloudComponent implements OnInit {
   set ncc(ncc: NCC) {
     this._ncc = ncc;
     this.cloudData = this.keywordsWordCloudService.getWordCloud(this.ncc);
+    console.log(this.cloudData);
   }
   _ncc?: NCC;
   cloudData?: CloudData[];

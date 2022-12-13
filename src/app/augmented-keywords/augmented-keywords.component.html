@@ -18,17 +18,19 @@
     <tr>
       <td>
         <ul>
-          <li *ngFor="let cdata of cloudData">{{ cdata.text }}</li>
+          <li *ngFor="let cdata of cloudData">
+            {{ cdata.text }}
+          </li>
         </ul>
       </td>
       <td>
-        <!-- <angular-tag-cloud
+        <angular-tag-cloud
           [data]="cloudData"
           [width]="options.width"
           [height]="options.height"
           [overflow]="options.overflow"
         >
-        </angular-tag-cloud> -->
+        </angular-tag-cloud>
       </td>
     </tr>
   </tbody>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { KeywordsService } from '../keywords.service';
+import { CommonModule } from '@angular/common';
 
 import { NCC } from '../ncc';
 

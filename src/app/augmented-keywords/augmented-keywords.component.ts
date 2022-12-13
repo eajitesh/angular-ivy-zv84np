@@ -15,7 +15,7 @@ import { NCC } from '../ncc';
   styleUrls: ['./augmented-keywords.component.css'],
 })
 export class AugmentedKeywordsComponent implements OnInit {
-  ncc: NCC | undefined;
+  ncc?: NCC;
   id?: number;
   keyword?: string;
   cloudData?: CloudData[];
