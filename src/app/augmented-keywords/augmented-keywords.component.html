@@ -1,10 +1,11 @@
-<div class="card bg-light mb-3">
+<div class="card bg-light mb-3" style="margin-top:20px">
+  <div class="card-header text-white bg-secondary">
+    AI-augmented keywords for "{{ keyword }}"
+  </div>
   <div class="card-body" style="font-size:14px">
     <strong>Name</strong>: {{ ncc.name }} ({{ ncc.id }}) <br />
     <strong>Description</strong>:
     {{ ncc.long_descr }}
-    <br />
-    <strong>Keyword</strong>: {{ keyword }}
   </div>
 </div>
 <table class="table-responsive table-bordered">
@@ -35,3 +36,6 @@
     </tr>
   </tbody>
 </table>
+<div>
+  <button type="button" (click)="goBack()">Back</button>
+</div>
