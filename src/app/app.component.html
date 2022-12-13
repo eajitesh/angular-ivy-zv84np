@@ -1,7 +1,7 @@
 <header>
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Some Company</a>
+    <a class="navbar-brand" href="/home">Some Company</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#"
+          <a class="nav-link" href="/home"
             >Home <span class="sr-only">(current)</span></a
           >
         </li>
@@ -28,11 +28,12 @@
 <!-- Begin page content -->
 <main role="main" class="container">
   <h1 class="mt-5" style="padding-top:40px">{{ name }}</h1>
-  <h6>
-    AI-augmented keywords dictionary for different spend categories (NCCs)
+  <h6 style="padding-left:5px">
+    AI-augmented keywords dictionary & details for different spend categories
+    (NCCs)
   </h6>
   <p>
-    <!-- <router-outlet></router-outlet> -->
-    <app-keywords-processor> </app-keywords-processor>
+    <router-outlet></router-outlet>
+    <!-- <app-keywords-processor> </app-keywords-processor> -->
   </p>
 </main>

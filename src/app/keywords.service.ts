@@ -10,4 +10,14 @@ export class KeywordsService {
   getSupportedNCCs(): NCC[] {
     return SupportedNCCs;
   }
+
+  getNCCbyUid(uid: number): NCC {
+    const len = SupportedNCCs.length;
+    for (let i = 0; i < len; i++) {
+      const ncc = SupportedNCCs[i];
+      if (ncc.uid == uid) {
+        return ncc;
+      }
+    }
+  }
 }
